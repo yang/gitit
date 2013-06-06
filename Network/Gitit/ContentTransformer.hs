@@ -506,6 +506,7 @@ updateLayout f = do
 readerFor :: PageType -> Bool -> String -> Pandoc
 readerFor pt lhs =
   let defPS = def{ readerSmart = True
+                 , readerTabStop = 2
                  , readerExtensions = if lhs
                                          then Set.insert Ext_literate_haskell
                                               $ readerExtensions def
